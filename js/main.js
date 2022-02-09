@@ -11,35 +11,43 @@ let idIntervalo = null;
 let botoes = 1;
 
 const quebro = () => {
-    semaforo.src = "../img/quebrado.jpg";
-    botoes = 1;
-    automatico.textContent = "Automático"
-    clearInterval(idIntervalo);
-}
+  semaforo.src = "../img/quebrado.jpg";
+  botoes = 2;
+  automatico.textContent = "Automático";
+  clearInterval(idIntervalo);
+};
 
 const ligarVerde = () => {
-  semaforo.src = "../img/verde.png";
-  botoes = 1;
-  automatico.textContent = "Automático"
-  clearInterval(idIntervalo);
+  if (botoes != 2) {
+    semaforo.src = "../img/verde.png";
+    botoes = 1;
+    automatico.textContent = "Automático";
+    clearInterval(idIntervalo);
+  }
 };
 const ligarAmarelo = () => {
-  semaforo.src = "../img/amarelo.png";
-  botoes = 1;
-  automatico.textContent = "Automático"
-  clearInterval(idIntervalo);
+  if (botoes != 2) {
+    semaforo.src = "../img/amarelo.png";
+    botoes = 1;
+    automatico.textContent = "Automático";
+    clearInterval(idIntervalo);
+  }
 };
 const ligarVermelho = () => {
-  semaforo.src = "../img/vermelho.png";
-  botoes = 1;
-  automatico.textContent = "Automático"
-  clearInterval(idIntervalo);
+  if (botoes != 2) {
+    semaforo.src = "../img/vermelho.png";
+    botoes = 1;
+    automatico.textContent = "Automático";
+    clearInterval(idIntervalo);
+  }
 };
 const desligar = () => {
-  semaforo.src = "../img/desligado.png";
-  botoes = 1;
-  automatico.textContent = "Automático"
-  clearInterval(idIntervalo);
+  if (botoes != 2) {
+    semaforo.src = "../img/desligado.png";
+    botoes = 1;
+    automatico.textContent = "Automático";
+    clearInterval(idIntervalo);
+  }
 };
 const automatizacao = () => {
   if (idAutomatico == null) {
@@ -61,13 +69,15 @@ const automatizacao = () => {
   botoes = 0;
 };
 const botaoAutomatico = () => {
-  if (botoes == 1) {
-    idIntervalo = setInterval(automatizacao, 300);
-    automatico.textContent = "Parar"
-  } else {
-    clearInterval(idIntervalo);
-    automatico.textContent = "Automático"
-    botoes = 1;
+  if (botoes != 2) {
+    if (botoes == 1) {
+      idIntervalo = setInterval(automatizacao, 300);
+      automatico.textContent = "Parar";
+    } else {
+      clearInterval(idIntervalo);
+      automatico.textContent = "Automático";
+      botoes = 1;
+    }
   }
 };
 
