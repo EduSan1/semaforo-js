@@ -11,7 +11,7 @@ let idIntervalo = null;
 let botoes = 1;
 
 const quebro = () => {
-  semaforo.src = "../img/quebrado.jpg";
+  semaforo.src = "img/quebrado.jpg";
   botoes = 2;
   automatico.textContent = "Automático";
   clearInterval(idIntervalo);
@@ -19,7 +19,7 @@ const quebro = () => {
 
 const ligarVerde = () => {
   if (botoes != 2) {
-    semaforo.src = "../img/verde.png";
+    semaforo.src = "img/verde.png";
     botoes = 1;
     automatico.textContent = "Automático";
     clearInterval(idIntervalo);
@@ -27,7 +27,7 @@ const ligarVerde = () => {
 };
 const ligarAmarelo = () => {
   if (botoes != 2) {
-    semaforo.src = "../img/amarelo.png";
+    semaforo.src = "img/amarelo.png";
     botoes = 1;
     automatico.textContent = "Automático";
     clearInterval(idIntervalo);
@@ -35,7 +35,7 @@ const ligarAmarelo = () => {
 };
 const ligarVermelho = () => {
   if (botoes != 2) {
-    semaforo.src = "../img/vermelho.png";
+    semaforo.src = "img/vermelho.png";
     botoes = 1;
     automatico.textContent = "Automático";
     clearInterval(idIntervalo);
@@ -43,7 +43,7 @@ const ligarVermelho = () => {
 };
 const desligar = () => {
   if (botoes != 2) {
-    semaforo.src = "../img/desligado.png";
+    semaforo.src = "img/desligado.png";
     botoes = 1;
     automatico.textContent = "Automático";
     clearInterval(idIntervalo);
@@ -51,19 +51,19 @@ const desligar = () => {
 };
 const automatizacao = () => {
   if (idAutomatico == null) {
-    semaforo.src = "../img/verde.png";
+    semaforo.src = "img/verde.png";
     idAutomatico = "amareloVd";
   } else if (idAutomatico == "amareloVd") {
-    semaforo.src = "../img/amarelo.png";
+    semaforo.src = "img/amarelo.png";
     idAutomatico = "vermelho";
   } else if (idAutomatico == "vermelho") {
-    semaforo.src = "../img/vermelho.png";
+    semaforo.src = "img/vermelho.png";
     idAutomatico = "amareloVm";
   } else if (idAutomatico == "amareloVm") {
-    semaforo.src = "../img/amarelo.png";
+    semaforo.src = "img/amarelo.png";
     idAutomatico = "verde";
   } else if (idAutomatico == "verde") {
-    semaforo.src = "../img/verde.png";
+    semaforo.src = "img/verde.png";
     idAutomatico = "amareloVd";
   }
   botoes = 0;
